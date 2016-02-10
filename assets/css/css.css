@@ -91,7 +91,7 @@ background-color :  #ffffff
 nav :hover:not(.active) {
 background-color : blue;
 }
-nav a : first-child {
+nav a :first-child {
 	border-left: 0 none;
 }
 
@@ -280,7 +280,7 @@ max-width: 100%;
 	padding-top: 50px;
 }
 
-
 }
+
 
 
