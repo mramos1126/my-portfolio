@@ -94,21 +94,50 @@
   </div>
 <footer>
 
-  <p style="text-align : center"> &copy Copyright 2016 Mauricio Ramos</p> </div>
+ <div>
+  <p style="text-align : center"> &copy Copyright 2016 Mauricio Ramos</p> 
+  </div>
   </footer>
+
 <script type="text/javascript">
-  
+ 
+
+  var test = "Your message has been submitted!";
+var contactFire =  new Firebase("https://appmessage.firebaseio.com/");
+
 $('#submit').on('click', function(){
+ var portfolioName = $("#name").val().trim();
+var  portfolioEmail = $("#email").val().trim();
+var portfolioMessage = $("message").val().trim();
+
+var objects = {
+
+name: portfolioName,
+email: portfolioMessage,
+message: portfolioMessage
+
+
+}
+
+
 var test = "Your message has been submitted!";
 alert(test);
 
-$('#message').empty();
-$('#email').empty();
-$('#name').empty();
-})
+$('#name').val("");
+$('#email').val("");
+$('#message').val("");
+return false;
 
+});
 
+contactFire.on("child_added", function(childSnapshot, prevChildKey){
 
+  console.log(childSnapshot.val());
+
+var portfolioName = childSnapshot.val().name;
+  var portfolioEmail = childSnapshot.val().email;
+  var portfolioMessage = childSnapshot.val().message;
+});
 
 </script>
 
