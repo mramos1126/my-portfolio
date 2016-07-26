@@ -111,14 +111,14 @@ $('#submit').on('click', function(){
 var  portfolioEmail = $("#email").val().trim();
 var portfolioMessage = $("#message").val().trim();
 
-var objects = {
+// var objects = {
 
-name: portfolioName,
-email: portfolioMessage,
-message: portfolioMessage
+// name: portfolioName,
+// email: portfolioMessage,
+// message: portfolioMessage
 
 
-};
+// };
 contactFire.push({
 Name : portfolioName,
 Email : portfolioEmail,
@@ -144,7 +144,7 @@ return false;
 
 contactFire.on("child_added", function(childSnapshot, prevChildKey){
 
-  console.log(childSnapshot.val());
+  //console.log(childSnapshot.val());
 
 var portfolioName = childSnapshot.val().name;
   var portfolioEmail = childSnapshot.val().email;
