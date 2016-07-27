@@ -22,7 +22,7 @@
       <div id="navbar" class="navbar-collapse collapse">
         
       
-      <a class="navbar-brand" href="contactboot.html">Mauricio Ramos</a>
+      <a class="navbar-brand" href="indexboot.html">Mauricio Ramos</a>
     </div>
 </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -99,11 +99,8 @@
   <p style="text-align : center"> &copy Copyright 2016 Mauricio Ramos</p> 
   </div>
   </footer>
-
-<script type="text/javascript">
- 
-
-  var test = "Your message has been submitted!";
+<script> 
+var test = "Your message has been submitted!";
 var contactFire =  new Firebase("https://appmessage.firebaseio.com/");
 
 $('#submit').on('click', function(){
@@ -150,7 +147,6 @@ var portfolioName = childSnapshot.val().name;
   var portfolioEmail = childSnapshot.val().email;
   var portfolioMessage = childSnapshot.val().message;
 });
-
 </script>
 
 </body>
